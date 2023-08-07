@@ -26,7 +26,7 @@ import fr.theshark34.swinger.Swinger;
 public class Launcher {
 
     public static final GameVersion TY_VERSION = new GameVersion("1.7.10", GameType.V1_7_10);
-    public static final GameInfos TY_INFOS = new GameInfos("Tyrolium", TY_VERSION, new GameTweak[] {GameTweak.FORGE});
+    public static final GameInfos TY_INFOS = new GameInfos("TyroServ", TY_VERSION, new GameTweak[] {GameTweak.FORGE});
     public static final	File TY_DIR = TY_INFOS.getGameDir();
 
     public static AuthInfos authInfos;

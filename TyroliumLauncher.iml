@@ -22,7 +22,7 @@
     <orderEntry type="module-library">
       <library name="mysql-connector-java-5.1.48.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Ficher/mysql-connector-java-5.1.48/mysql-connector-java-5.1.48.jar!/" />
+          <root url="jar://$MODULE_DIR$/../lib/mysql-connector-java-5.1.48.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -31,7 +31,7 @@
     <orderEntry type="module-library">
       <library name="gson-2.8.2.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Ficher/gson-2.8.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/../lib/gson-2.8.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -40,7 +40,7 @@
     <orderEntry type="module-library">
       <library name="openauth-1.0.3-SNAPSHOT.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Ficher/openauth-1.0.3-SNAPSHOT.jar!/" />
+          <root url="jar://$MODULE_DIR$/../lib/openauth-1.0.3-SNAPSHOT.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -49,7 +49,7 @@
     <orderEntry type="module-library">
       <library name="openlauncherlib-3.0.5.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Ficher/openlauncherlib-3.0.5.jar!/" />
+          <root url="jar://$MODULE_DIR$/../lib/openlauncherlib-3.0.5.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -58,7 +58,7 @@
     <orderEntry type="module-library">
       <library name="s-update-3.1.0-BETA.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Ficher/s-update-3.1.0-BETA.jar!/" />
+          <root url="jar://$MODULE_DIR$/../lib/s-update-3.1.0-BETA.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -67,11 +67,12 @@
     <orderEntry type="module-library">
       <library name="swinger-1.0.0-BETA.jar">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Ficher/swinger-1.0.0-BETA.jar!/" />
+          <root url="jar://$MODULE_DIR$/../lib/swinger-1.0.0-BETA.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="java-discord-rpc-2.0.1" level="project" />
   </component>
 </module>

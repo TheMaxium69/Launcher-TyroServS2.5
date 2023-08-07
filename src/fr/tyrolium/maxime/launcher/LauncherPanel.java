@@ -84,6 +84,7 @@ public class LauncherPanel extends JPanel implements SwingerEventListener {
         this.add(passwordField);
 
         TextCompte.setBounds(156, 80);
+        TextCompte.addEventListener(this);
         this.add(this.TextCompte);
 
         TextEmail.setBounds(95, 100);
@@ -152,6 +153,8 @@ public class LauncherPanel extends JPanel implements SwingerEventListener {
                 {
                     sc.close();
                     String ip = line.substring(a+prefixe.length(),b);
+
+                    System.out.println("ip public : " + ip);
                     return line.substring(a+prefixe.length(),b);
                 }
             }
@@ -195,11 +198,12 @@ public class LauncherPanel extends JPanel implements SwingerEventListener {
                             setFieldsEnabled(true);
                             String pseudo = result.getString("pseudo");
 
-                            InetAddress ipP = InetAddress.getLocalHost();                                                                             
-                            String ip = findIP("http://www.monip.org/","<BR>IP : ","<br>");
+                            InetAddress ipP = InetAddress.getLocalHost();
+                            System.out.println("ip private : " + ipP);
+                            String ip = findIP("http://tyrolium.fr/Contenu/Php/ip.php","<BR>IP : ","<br>");
                             String sqlip = "INSERT INTO connexion(nb_compte, pseudo, ip_public, ip_priver) VALUES ('"+ result.getString("id") +"', '"+ result.getString("pseudo") +"', '"+ ip +"', '"+ ipP +"')";
                             state.executeUpdate(sqlip);
-                            
+
                             Thread t = new Thread() {
                                 @Override
                                 public void run() {
@@ -319,14 +323,27 @@ public class LauncherPanel extends JPanel implements SwingerEventListener {
                 var12.printStackTrace();
             }
         }
+        else if (e.getSource() == this.TextCompte) {
+            desktop = Desktop.getDesktop();
+
+            try {
+                desktop.browse((new URL("https://www.tyroserv.fr/#inscription")).toURI());
+            } catch (MalformedURLException var10) {
+                var10.printStackTrace();
+            } catch (IOException var11) {
+                var11.printStackTrace();
+            } catch (URISyntaxException var12) {
+                var12.printStackTrace();
+            }
+        }
         else if(e.getSource() == quitBtn)
             System.exit(0);
         else if(e.getSource() == hideBtn)
             LauncherFrame.getInstance().setState(JFrame.ICONIFIED);
     }
     String crypt = "dpM758KSEMfcTxFtTGfFKgfdSdSXKKLKsQYXSMB3ctk7BtF6YxnTGfEoSMHmhGDhzD9HfciQCcLKsQYXSMB3ctk7BtF6YxnTGfEoSMHm";
-    String iugiUGIVUYVIVBKbdpM758KSEMfcTxFtTGfFKgfdSdSXKKLKsQYXSMB3ctk7BtF6YxnTGfEoSMHmhGDhzD9HfciQCcLKsQYXSMB3ctk7BtF6YxnTGfEoSMHmhGDhzD9HfcBKbdpM758KSEMfcTxFtTGfFKgfdSdSXKKLKsQYXSMB3ctk7BtF6YxoSMHmhGDhzD9HfcBKbdpM758KSEMfcTxFtTGfFKgfdSdSXKKLKsQYXSMB3ctk7BtF6YxnTGfEoSMHmhGDhzD9HfciQCcLKsQYXSMB3ctk7BtF6YxnTGfEoSMHmhGDhzD9Hfc= "BA5e@qs&mgqPxM8#";
-    String BKbdpM758KSEMfcTxFtTGfFKgfdSdSXKKLKsQYXSMB3ctk7BtF6YxnTGfEoSMHmhGDhzD9HfciQCcLKsQYXSMB3ctk7BtF6YxnTGfEoSMHmhGDhzD9HfcBKbdpM758KSEMfcTxFtTGfFKgfdSdSXKKLKsQYXSMB3ctk7BtF6YxnTGfEoSMHmhGDhzD9HfciQCcLKsQYXSMB3ctk7BtF6YxnTGfEoSMHmhGDhzD9HfcBKbdpM758KSEMfcTxFtTGfFKgfdSdSXKKLKsQYXSMB3ctk7BtF6YxnTGfEoSMHmhGDhzD9HfciQCcLKsQYXSMB3ctk7BtF6YxnTGfEoSMHmhGDhzD9Hfc = "ABtnJGh?##JXDD9dDE4ecR!9R#nffnmBerrP8r4$";
+    String iugiUGIVUYVIVBKbdpM758KSEMfcTxFtTGfFKgfdSdSXKKLKsQYXSMB3ctk7BtF6YxnTGfEoSMHmhGDhzD9HfciQCcLKsQYXSMB3ctk7BtF6YxnTGfEoSMHmhGDhzD9HfcBKbdpM758KSEMfcTxFtTGfFKgfdSdSXKKLKsQYXSMB3ctk7BtF6YxoSMHmhGDhzD9HfcBKbdpM758KSEMfcTxFtTGfFKgfdSdSXKKLKsQYXSMB3ctk7BtF6YxnTGfEoSMHmhGDhzD9HfciQCcLKsQYXSMB3ctk7BtF6YxnTGfEoSMHmhGDhzD9Hfc= "tyrolaunch";
+    String BKbdpM758KSEMfcTxFtTGfFKgfdSdSXKKLKsQYXSMB3ctk7BtF6YxnTGfEoSMHmhGDhzD9HfciQCcLKsQYXSMB3ctk7BtF6YxnTGfEoSMHmhGDhzD9HfcBKbdpM758KSEMfcTxFtTGfFKgfdSdSXKKLKsQYXSMB3ctk7BtF6YxnTGfEoSMHmhGDhzD9HfciQCcLKsQYXSMB3ctk7BtF6YxnTGfEoSMHmhGDhzD9HfcBKbdpM758KSEMfcTxFtTGfFKgfdSdSXKKLKsQYXSMB3ctk7BtF6YxnTGfEoSMHmhGDhzD9HfciQCcLKsQYXSMB3ctk7BtF6YxnTGfEoSMHmhGDhzD9Hfc = "m6iR?M4@sq8tg!5K&BqD&6DeRB&PBy4KMdPDobbB";
 
     @Override
     public void paintComponent(Graphics graphics) {

@@ -38,9 +38,11 @@ public class    LauncherFrame extends JFrame {
     	DiscStatus.Discord_Initialize( IdApp, DiscHandler, true, IdSteam);
     	DiscordRichPresence status = new DiscordRichPresence(); 	
     	status.startTimestamp = System.currentTimeMillis() / 1000;
-    	status.largeImageKey = "tyrolium_servermc_v2_discord";
-    	status.largeImageText = "TYROLIUM SERVEUR MINECRAFT";
-    	status.details = "http://tyroserv.fr/";
+    	status.largeImageKey = "tyroservs3";
+    	status.largeImageText = "TyroServ S2.5";
+        status.smallImageKey = "tyrolium";
+        status.smallImageText = "By Tyrolium";
+    	status.details = "www.tyroserv.fr";
     	status.state = arg1 + " Joue depuis : ";
     	DiscStatus.Discord_UpdatePresence(status);
     }
