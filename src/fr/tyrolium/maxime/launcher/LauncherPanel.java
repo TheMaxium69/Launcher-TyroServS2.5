@@ -55,10 +55,14 @@ public class LauncherPanel extends JPanel implements SwingerEventListener {
     private STexturedButton quitBtn = new STexturedButton(Swinger.getResource("quit.png"));
     private STexturedButton hideBtn = new STexturedButton(Swinger.getResource("hide.png"));
     private STexturedButton siteBtn = new STexturedButton(Swinger.getResource("site.png"));
+    private STexturedButton tyroBtn = new STexturedButton(Swinger.getResource("tyro.png"));
     private STexturedButton shopBtn = new STexturedButton(Swinger.getResource("shop.png"));
     private STexturedButton instaBtn = new STexturedButton(Swinger.getResource("insta.png"));
     private STexturedButton discBtn = new STexturedButton(Swinger.getResource("disc.png"));
     private STexturedButton tweetBtn = new STexturedButton(Swinger.getResource("tweet.png"));
+    private STexturedButton ytbBtn = new STexturedButton(Swinger.getResource("ytb.png"));
+    private STexturedButton linkeBtn = new STexturedButton(Swinger.getResource("linked.png"));
+    private STexturedButton tiktokBtn = new STexturedButton(Swinger.getResource("tiktok.png"));
     private STexturedButton icone = new STexturedButton(Swinger.getResource("logo.png"));
 
     private SColoredBar progressBar = new SColoredBar(new Color(255, 255, 255, 15));
@@ -120,13 +124,13 @@ public class LauncherPanel extends JPanel implements SwingerEventListener {
         siteBtn.addEventListener(this);
         this.add(this.siteBtn);
 
-        shopBtn.setBounds(58, 9, 40, 40);
+        tyroBtn.setBounds(58, 9, 40, 40);
+        tyroBtn.addEventListener(this);
+        this.add(this.tyroBtn);
+
+        shopBtn.setBounds(108, 9, 40, 40);
         shopBtn.addEventListener(this);
         this.add(this.shopBtn);
-
-        instaBtn.setBounds(108, 9, 40, 40);
-        instaBtn.addEventListener(this);
-        this.add(this.instaBtn);
 
         discBtn.setBounds(158, 9, 40, 40);
         discBtn.addEventListener(this);
@@ -135,6 +139,22 @@ public class LauncherPanel extends JPanel implements SwingerEventListener {
         tweetBtn.setBounds(208, 9, 40, 40);
         tweetBtn.addEventListener(this);
         this.add(this.tweetBtn);
+
+        instaBtn.setBounds(258, 9, 40, 40);
+        instaBtn.addEventListener(this);
+        this.add(this.instaBtn);
+
+        ytbBtn.setBounds(308, 9, 40, 40);
+        ytbBtn.addEventListener(this);
+        this.add(this.ytbBtn);
+
+        tiktokBtn.setBounds(358, 9, 40, 40);
+        tiktokBtn.addEventListener(this);
+        this.add(this.tiktokBtn);
+
+        linkeBtn.setBounds(408, 9, 40, 40);
+        linkeBtn.addEventListener(this);
+        this.add(this.linkeBtn);
     }
 
     public static String findIP(String site, String prefixe, String suffixe) throws Exception
@@ -262,7 +282,20 @@ public class LauncherPanel extends JPanel implements SwingerEventListener {
             desktop = Desktop.getDesktop();
 
             try {
-                desktop.browse((new URL("http://tyroserv.fr/")).toURI());
+                desktop.browse((new URL("https://www.tyroserv.fr/")).toURI());
+            } catch (MalformedURLException var10) {
+                var10.printStackTrace();
+            } catch (IOException var11) {
+                var11.printStackTrace();
+            } catch (URISyntaxException var12) {
+                var12.printStackTrace();
+            }
+        }
+        else if (e.getSource() == this.tyroBtn) {
+            desktop = Desktop.getDesktop();
+
+            try {
+                desktop.browse((new URL("https://tyrolium.fr/")).toURI());
             } catch (MalformedURLException var10) {
                 var10.printStackTrace();
             } catch (IOException var11) {
@@ -315,6 +348,45 @@ public class LauncherPanel extends JPanel implements SwingerEventListener {
 
             try {
                 desktop.browse((new URL("https://twitter.com/tyrolium")).toURI());
+            } catch (MalformedURLException var10) {
+                var10.printStackTrace();
+            } catch (IOException var11) {
+                var11.printStackTrace();
+            } catch (URISyntaxException var12) {
+                var12.printStackTrace();
+            }
+        }
+        else if (e.getSource() == this.ytbBtn) {
+            desktop = Desktop.getDesktop();
+
+            try {
+                desktop.browse((new URL("https://www.youtube.com/@TyroServ")).toURI());
+            } catch (MalformedURLException var10) {
+                var10.printStackTrace();
+            } catch (IOException var11) {
+                var11.printStackTrace();
+            } catch (URISyntaxException var12) {
+                var12.printStackTrace();
+            }
+        }
+        else if (e.getSource() == this.tiktokBtn) {
+            desktop = Desktop.getDesktop();
+
+            try {
+                desktop.browse((new URL("https://www.tiktok.com/@tyroserv")).toURI());
+            } catch (MalformedURLException var10) {
+                var10.printStackTrace();
+            } catch (IOException var11) {
+                var11.printStackTrace();
+            } catch (URISyntaxException var12) {
+                var12.printStackTrace();
+            }
+        }
+        else if (e.getSource() == this.linkeBtn) {
+            desktop = Desktop.getDesktop();
+
+            try {
+                desktop.browse((new URL("https://www.linkedin.com/company/tyroserv")).toURI());
             } catch (MalformedURLException var10) {
                 var10.printStackTrace();
             } catch (IOException var11) {

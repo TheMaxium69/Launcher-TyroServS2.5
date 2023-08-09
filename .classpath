@@ -6,12 +6,12 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="D:/Tyrolium/Workspace/launcher/Ficher/mysql-connector-java-5.1.48/mysql-connector-java-5.1.48.jar"/>
-	<classpathentry kind="lib" path="D:/Tyrolium/Workspace/launcher/Ficher/gson-2.8.2.jar"/>
-	<classpathentry kind="lib" path="D:/Tyrolium/Workspace/launcher/Ficher/openauth-1.0.3-SNAPSHOT.jar"/>
-	<classpathentry kind="lib" path="D:/Tyrolium/Workspace/launcher/Ficher/openlauncherlib-3.0.5.jar"/>
-	<classpathentry kind="lib" path="D:/Tyrolium/Workspace/launcher/Ficher/s-update-3.1.0-BETA.jar"/>
-	<classpathentry kind="lib" path="D:/Tyrolium/Workspace/launcher/Ficher/swinger-1.0.0-BETA.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Maxime Tournier/Desktop/java-discord-rpc-2.0.1.jar"/>
+	<classpathentry kind="lib" path="E:/Minecraft/lib/mysql-connector-java-5.1.48.jar"/>
+	<classpathentry kind="lib" path="E:/Minecraft/lib/gson-2.8.2.jar"/>
+	<classpathentry kind="lib" path="E:/Minecraft/lib/openauth-1.0.3-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="E:/Minecraft/lib/openlauncherlib-3.0.5.jar"/>
+	<classpathentry kind="lib" path="E:/Minecraft/lib/s-update-3.1.0-BETA.jar"/>
+	<classpathentry kind="lib" path="E:/Minecraft/lib/swinger-1.0.0-BETA.jar"/>
+	<classpathentry kind="lib" path="E:/Minecraft/lib/java-discord-rpc-2.0.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
